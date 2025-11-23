@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Style Tile - Plataforma de Inscripción</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue-900:#003366; /* institucional */
+      --blue-600:#0055A4; /* primario */
+      --green:#2ECC71; /* exito */
+      --red:#E74C3C; /* error */
+      --yellow:#F39C12; /* advertencia */
+      --bg:#F4F6F7;
+      --text:#2C3E50;
+      --muted:#6B7785;
+      --card:#ffffff;
+      --border:#D0D7DE;
+      --radius:8px;
+    }
+    html,body{height:100%;margin:0;font-family:Roboto,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:var(--text)}
+    .container{max-width:1100px;margin:36px auto;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.95));box-shadow:0 6px 18px rgba(12,20,30,0.06);border-radius:12px}
+    header.tile-header{display:flex;gap:18px;align-items:center}
+    .logo{width:72px;height:72px;background:var(--card);border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);overflow:hidden}
+    .logo img{width:100%;height:100%;object-fit:cover}
+    h1{font-family:Poppins, sans-serif;font-weight:600;margin:0;font-size:22px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .panel{background:var(--card);padding:18px;border-radius:10px;border:1px solid var(--border)}
+    .panel h3{font-family:Poppins;font-size:14px;margin:0 0 8px}
+    .swatches{display:flex;gap:10px;flex-wrap:wrap}
+    .sw{width:110px;height:72px;border-radius:8px;box-shadow:inset 0 -6px 12px rgba(0,0,0,0.02);display:flex;flex-direction:column;justify-content:flex-end;padding:8px;color:#fff;font-weight:600}
+    .sw small{font-family:Roboto;font-weight:500;font-size:12px;opacity:0.95}
+    .sw.meta{height:auto;padding:10px;color:var(--text);background:transparent}
+
+    .type-sample{display:flex;flex-direction:column;gap:8px}
+    .type-sample .h{font-family:Poppins;font-weight:600;color:var(--text)}
+    .type-sample .p{font-family:Roboto;color:var(--muted)}
+
+    .components{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;border:0;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--blue-600);color:#fff}
+    .btn-secondary{background:transparent;border:1px solid var(--blue-600);color:var(--blue-600)}
+    .btn-success{background:var(--green);color:#fff}
+    .btn-danger{background:var(--red);color:#fff}
+
+    .card{border:1px solid var(--border);background:var(--card);padding:14px;border-radius:10px}
+    .course-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px dashed var(--border)}
+
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:10px 8px;text-align:left;border-bottom:1px solid #f0f2f4}
+    th{font-family:Poppins;color:var(--muted);font-weight:600}
+
+    .alert{padding:12px 14px;border-radius:8px;margin-top:12px}
+    .alert-success{background:rgba(46,204,113,0.12);border:1px solid rgba(46,204,113,0.2);color:var(--green)}
+    .alert-error{background:rgba(231,76,60,0.08);border:1px solid rgba(231,76,60,0.12);color:var(--red)}
+
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}.components{grid-template-columns:1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="tile-header">
+      <div class="logo">
+        <img src="c:\Users\Asus TUF\Desktop\UNIVERSIDAD COOPERATIVA DE COLOMBIA\SEGUNDO SEMESTRE\Ingenieria de Requisitos\imgs rquerimientos\LOGO UNINET.png" alt="logo"/>
+      </div>
+      <div>
+        <h1>Style Tile — Plataforma de Inscripción Universitaria</h1>
+        <p class="lead">Guía visual rápida: paleta, tipografías y componentes para la plataforma. </p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="panel">
+        <h3>Paleta Principal</h3>
+        <div class="swatches">
+          <div class="sw" style="background:var(--blue-900)"><small>#003366</small></div>
+          <div class="sw" style="background:var(--blue-600)"><small>#0055A4</small></div>
+          <div class="sw" style="background:var(--green)"><small>#2ECC71</small></div>
+          <div class="sw" style="background:var(--red)"><small>#E74C3C</small></div>
+          <div class="sw" style="background:var(--yellow)"><small>#F39C12</small></div>
+          <div class="sw meta"><small style="color:var(--muted)">Fondo: #F4F6F7</small><br/><small style="color:var(--muted)">Texto: #2C3E50</small></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Tipografías</h3>
+        <div class="type-sample">
+          <div class="h" style="font-size:18px;">Poppins – Títulos</div>
+          <div class="p">Roboto – Cuerpo de texto y formularios. Usar pesos 300/400/500.</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Iconografía</h3>
+        <p class="p">Utilizar iconos lineales (Lucide / Feather / Bootstrap icons). Tamaños: 16–20px (body), 24–28px (títulos).</p>
+      </div>
+
+      <div class="panel">
+        <h3>Espaciado y bordes</h3>
+        <p class="p">Bordes suaves: radius 8px. Separaciones generosas para legibilidad, padding 12–18px en componentes.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Botones</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-primary">Inscribirme</button>
+          <button class="btn btn-secondary">Cancelar</button>
+          <button class="btn btn-success">Pagar</button>
+          <button class="btn btn-danger">Eliminar</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Mensajes</h3>
+        <div class="alert alert-success">Inscripción realizada con éxito.</div>
+        <div class="alert alert-error">Este curso ya no tiene cupos disponibles.</div>
+      </div>
+
+    </div>
+
+    <section class="components">
+      <div class="panel">
+        <h3>Ejemplo: Card de curso</h3>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <strong>Introducción a la programación</strong>
+              <div style="color:var(--muted);font-size:13px;margin-top:6px">Dr. Pérez • Lun 9:00 - 11:00 • Presencial</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700;margin-bottom:6px">Cupos: <span style="color:var(--blue-600)">5</span></div>
+              <button class="btn btn-primary">Inscribirme</button>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:12px">Tabla de ejemplo</h3>
+        <table>
+          <thead>
+            <tr><th>Nombre del curso</th><th>Docente</th><th>Horario</th><th>Cupos</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Desarrollo web</td><td>Ing. Gómez</td><td>Mar 16:00-18:00</td><td>10</td></tr>
+            <tr><td>Bases de datos</td><td>Dr. López</td><td>Mié 14:00-16:00</td><td>3</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="panel">
+        <h3>Formularios</h3>
+        <form>
+          <label style="display:block;font-weight:600;margin-bottom:6px">Nombre completo</label>
+          <input type="text" placeholder="Nombre completo" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);margin-bottom:10px"/>
+          <label style="display:block;font-weight:600;margin-bottom:6px">Correo</label>
+          <input type="email" placeholder="correo@uni.edu" style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);margin-bottom:10px"/>
+          <label style="display:block;font-weight:600;margin-bottom:6px">Rol</label>
+          <select style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);margin-bottom:12px">
+            <option>Estudiante</option>
+            <option>Profesor</option>
+            <option>Administrador</option>
+          </select>
+          <div style="display:flex;gap:8px;">
+            <button class="btn btn-primary" type="button">Registrar</button>
+            <button class="btn btn-secondary" type="button">Cancelar</button>
+          </div>
+        </form>
+
+        <h3 style="margin-top:12px">Notificaciones</h3>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div class="alert alert-success">Pago aprobado. Inscripción completada.</div>
+          <div class="alert alert-error">Conflicto detectado: aula ocupada.</div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</body>
+</html>
